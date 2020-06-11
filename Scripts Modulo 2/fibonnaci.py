@@ -15,6 +15,7 @@ def fibonnaci_dinamico(n, memo = {}):
     except KeyError as e:
         resultado = fibonnaci_dinamico(n - 1, memo) + fibonnaci_dinamico(n - 2, memo)
         memo[n] = resultado
+        
         print(memo)
         return resultado
         
@@ -24,5 +25,6 @@ if __name__ == "__main__":
     comienzo = time.time()
     resultado = fibonnaci_dinamico(n)
     print(resultado)
+    
     final = time.time()
     print(final - comienzo)
